@@ -28,4 +28,10 @@ public class Cliente implements Serializable {
         @Column(name = "cpf")
         private String cpf;
 
+        @Column(name = "username")
+        private String username;
+
+        @Column(name = "password")
+        private String password;
+
 }
