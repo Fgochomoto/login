@@ -34,4 +34,13 @@ public class Cliente implements Serializable {
         @Column(name = "password")
         private String password;
 
+        @Column(name = "novaSenha")
+        private  Boolean novaSenha = false;
+
+        @Column(name = "tentativas")
+        private  int tentativas = 0;
+
+        @Column(name = "locked")
+        private  Boolean isLocked = false;
+
 }

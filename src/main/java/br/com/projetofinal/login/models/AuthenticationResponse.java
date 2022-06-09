@@ -1,16 +1,16 @@
 package br.com.projetofinal.login.models;
 
-import java.io.Serializable;
+import lombok.Data;
 
+import java.io.Serializable;
+@Data
 public class AuthenticationResponse implements Serializable {
 
     private final String jwt;
+    private Boolean isBlocked;
 
-    public AuthenticationResponse(String jwt) {
+    public AuthenticationResponse(String jwt, Boolean isBlocked) {
         this.jwt = jwt;
-    }
-
-    public String getJwt() {
-        return jwt;
+        this.isBlocked = isBlocked;
     }
 }
