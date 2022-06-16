@@ -23,6 +23,7 @@ public class ClienteController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Cliente salvar(@RequestBody Cliente cliente){
+
         return clienteService.salvar(cliente);
     }
 

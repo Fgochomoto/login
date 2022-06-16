@@ -8,6 +8,8 @@ public class AuthenticationRequest implements Serializable {
     private String username;
     private String password;
 
+    private String newPassword;
+
     public String getUsername() {
         return username;
     }
@@ -24,14 +26,24 @@ public class AuthenticationRequest implements Serializable {
         this.password = password;
     }
 
+    public String getNewPasswordassword() {
+        return newPassword;
+    }
+
+    public void setNewPassword(String password) {
+        this.newPassword = password;
+    }
+
     //need default constructor for JSON Parsing
     public AuthenticationRequest()
     {
 
     }
 
-    public AuthenticationRequest(String username, String password) {
+    public AuthenticationRequest(String username, String password, String newPassword) {
         this.setUsername(username);
         this.setPassword(password);
+        this.setNewPassword(newPassword);
     }
+
 }

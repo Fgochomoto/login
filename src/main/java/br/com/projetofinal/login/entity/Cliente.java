@@ -34,13 +34,22 @@ public class Cliente implements Serializable {
         @Column(name = "password")
         private String password;
 
+        @Column(name = "isNovaSenha")
+        private  Boolean isNovaSenha = false;
+
         @Column(name = "novaSenha")
-        private  Boolean novaSenha = false;
+        private  String novaSenha;
 
         @Column(name = "tentativas")
         private  int tentativas = 0;
 
         @Column(name = "locked")
         private  Boolean isLocked = false;
+
+        @Column(name = "mfaEnabled")
+        private boolean mfaEnabled = false;
+
+        @Column(name = "secretImageUri")
+        private String secretImageUri;
 
 }
